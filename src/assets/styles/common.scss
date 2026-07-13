@@ -1,0 +1,40 @@
+@function px2vw($px) {
+  @return calc($px / 375 * 100vw);
+}
+
+@function px2vh($px) {
+  @return calc($px / 812 * 100vh);
+}
+
+%backgroundimagecommon {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+%statusBarHeight {
+  height: 0px;
+  height: constant(safe-area-inset-top);
+  height: env(safe-area-inset-top);
+}
+
+%bottomSafeArea {
+  height: 0;
+  height: constant(safe-area-inset-bottom);
+  height: env(safe-area-inset-bottom);
+}
+
+%ellipsis-1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+%ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
