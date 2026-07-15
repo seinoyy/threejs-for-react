@@ -64,7 +64,6 @@ body,
 
 div {
   outline: none;
-  user-select: none;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
   scrollbar-width: none;
