@@ -5,10 +5,12 @@ import DebugApp from './DebugApp'
 import EnvironmentApp from './EnvironmentApp'
 import ModelApp from './ModelApp'
 import TextApp from './TextApp'
+import PortalScene from './PortalScene'
 
 export default function App() {
   const getApp = (
-    appMode: 'ELEMENTARY' | 'FIBER' | 'DREI' | 'DEBUG' | 'ENVIRONMENT' | 'MODEL' | 'TEXT'
+    appMode:
+      'ELEMENTARY' | 'FIBER' | 'DREI' | 'DEBUG' | 'ENVIRONMENT' | 'MODEL' | 'TEXT' | 'PORTALSSCENE'
   ) => {
     switch (appMode) {
       case 'ELEMENTARY':
@@ -25,10 +27,12 @@ export default function App() {
         return <ModelApp />
       case 'TEXT':
         return <TextApp />
+      case 'PORTALSSCENE':
+        return <PortalScene />
       default:
         return null
     }
   }
 
-  return getApp('TEXT')
+  return getApp('PORTALSSCENE')
 }
