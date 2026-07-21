@@ -6,11 +6,20 @@ import EnvironmentApp from './EnvironmentApp'
 import ModelApp from './ModelApp'
 import TextApp from './TextApp'
 import PortalScene from './PortalScene'
+import PointerApp from './PointerApp'
 
 export default function App() {
   const getApp = (
     appMode:
-      'ELEMENTARY' | 'FIBER' | 'DREI' | 'DEBUG' | 'ENVIRONMENT' | 'MODEL' | 'TEXT' | 'PORTALSSCENE'
+      | 'ELEMENTARY'
+      | 'FIBER'
+      | 'DREI'
+      | 'DEBUG'
+      | 'ENVIRONMENT'
+      | 'MODEL'
+      | 'TEXT'
+      | 'PORTALSSCENE'
+      | 'POINTER'
   ) => {
     switch (appMode) {
       case 'ELEMENTARY':
@@ -29,10 +38,12 @@ export default function App() {
         return <TextApp />
       case 'PORTALSSCENE':
         return <PortalScene />
+      case 'POINTER':
+        return <PointerApp />
       default:
         return null
     }
   }
 
-  return getApp('PORTALSSCENE')
+  return getApp('POINTER')
 }
