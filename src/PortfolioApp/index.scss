@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: ivory;
+}
+
+.container canvas {
+  touch-action: none;
+}
+
+.htmlScreen iframe {
+  width: 1024px;
+  height: 670px;
+  border: none;
+  background-color: #000000;
+}

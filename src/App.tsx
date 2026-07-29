@@ -8,6 +8,7 @@ import TextApp from './TextApp'
 import PortalScene from './PortalScene'
 import PointerApp from './PointerApp'
 import PostProcessing from './PostProcessing'
+import PortfolioApp from './PortfolioApp'
 
 export default function App() {
   const getApp = (
@@ -22,6 +23,7 @@ export default function App() {
       | 'PORTALSSCENE'
       | 'POINTER'
       | 'POSTPROCESSING'
+      | 'PORTFOLIO'
   ) => {
     switch (appMode) {
       case 'ELEMENTARY':
@@ -44,10 +46,12 @@ export default function App() {
         return <PointerApp />
       case 'POSTPROCESSING':
         return <PostProcessing />
+      case 'PORTFOLIO':
+        return <PortfolioApp />
       default:
         return null
     }
   }
 
-  return getApp('POSTPROCESSING')
+  return getApp('PORTFOLIO')
 }
