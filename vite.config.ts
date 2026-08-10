@@ -12,4 +12,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  server: {
+    host: '0.0.0.0', // 核心配置，也可以写 host: true
+    port: 5173, // 可选：固定端口
+    strictPort: true, // 可选：端口占用则直接报错，不自动换端口
+  },
 })

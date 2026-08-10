@@ -10,6 +10,7 @@ import PointerApp from './PointerApp'
 import PostProcessing from './PostProcessing'
 import PortfolioApp from './PortfolioApp'
 import PhysicsApp from './PhysicsApp'
+import GameApp from './GameApp'
 
 export default function App() {
   const getApp = (
@@ -26,6 +27,7 @@ export default function App() {
       | 'POSTPROCESSING'
       | 'PORTFOLIO'
       | 'PHYSICS'
+      | 'GAME'
   ) => {
     switch (appMode) {
       case 'ELEMENTARY':
@@ -52,10 +54,12 @@ export default function App() {
         return <PortfolioApp />
       case 'PHYSICS':
         return <PhysicsApp />
+      case 'GAME':
+        return <GameApp />
       default:
         return null
     }
   }
 
-  return getApp('PHYSICS')
+  return getApp('GAME')
 }

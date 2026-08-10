@@ -1,0 +1,59 @@
+.game-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-family: 'Bebas Neue', cursive;
+
+  .time {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    line-height: 6vh;
+    color: #ffffff;
+    font-size: 6vh;
+    background-color: #00000033;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  .restart {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    line-height: 80px;
+    color: #ffffff;
+    font-size: 80px;
+    background-color: #00000033;
+    padding-top: 10px;
+    text-align: center;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  .controls {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    .raw {
+      display: flex;
+      justify-content: center;
+    }
+    .key {
+      width: 40px;
+      height: 40px;
+      margin: 4px;
+      border: 2px solid #ffffff;
+      background-color: #ffffff44;
+    }
+    .large {
+      width: 144px;
+    }
+    .key.active {
+      background-color: #ffffff99;
+    }
+  }
+}
